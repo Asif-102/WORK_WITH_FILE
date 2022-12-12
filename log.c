@@ -22,5 +22,7 @@ int main() {
         if(ch != ' ')
             fprintf(logFile, "%c %s", ch, asctime(tm));
     }
+    fclose(logFile);
+    fclose(input);
     return 0;
 }

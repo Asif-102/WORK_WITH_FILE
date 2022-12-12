@@ -17,5 +17,7 @@ int main() {
             break;
         fputc(ch, outputFile);
     }
+    fclose(inputFile);
+    fclose(outputFile);
     return 0;
 }
