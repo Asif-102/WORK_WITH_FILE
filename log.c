@@ -14,11 +14,13 @@ int main() {
         printf("file not found...");
         return 0;
     }
-    while (1) {
-        char ch = fgetc(input);
-        if (ch == EOF)
-            break;
-        fprintf(logFile, "%c %s", ch, asctime(tm));
+    char ch;
+    while (fscanf(input, "%c", &ch)!= EOF) {
+        // char ch = fgetc(input);
+        // if (ch == EOF)
+        //     break;
+        if(ch != ' ')
+            fprintf(logFile, "%c %s", ch, asctime(tm));
     }
     return 0;
 }
